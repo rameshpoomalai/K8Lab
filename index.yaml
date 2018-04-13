@@ -1,0 +1,28 @@
+apiVersion: v1
+entries:
+  letschat:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: 2018-04-04T17:17:10.991443182+05:30
+    description: A Helm chart for Kubernetes
+    digest: d070d967f85e31071f08eeaaee1844397ee491b7f52a257fce7484faeff972f2
+    name: letschat
+    urls:
+    - letschat-0.1.0.tgz
+    version: 0.1.0
+  mongo:
+  - apiVersion: v1
+    created: 2018-04-04T17:17:10.991842389+05:30
+    description: A Helm chart for Kubernetes that creates a PoC-level deployment of
+      Mongo.
+    digest: 49da5c350430fc26cb9e666ba5736089480c16b26a68449857f8f887864c4f10
+    maintainers:
+    - email: rmesh.poomalai@in.ibm.com
+      name: Ramesh Poomalai
+    name: mongo
+    sources:
+    - https://hub.docker.com/r/library/mongo/
+    urls:
+    - mongo-0.1.0.tgz
+    version: 0.1.0
+generated: 2018-04-04T17:17:10.990741422+05:30
