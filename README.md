@@ -71,11 +71,23 @@ https://github.com/kubernetes/helm/blob/master/docs/install.md
 
 6. bx cs workers <your_cluster_name_created_under_ibm_cloud>
     The output will be similar to as below. 
-    The ip marked i bold is cluster IP in my case.
+    The public ip will be your cluster ip to access your applcation
 ``` 
-    ID                                                 Public IP      Private IP
-    kube-mel01-paedbc7786e21c450e813eadc69ebaf43b-w1   168.1.149.16   10.118.243.226
+    bx cs workers <your_cluster_name>
+    ID                                                  Public IP        Private IP
+    kube-mel01-paedbc7786e21c450e813eadc69ebaf43b-w1    168.1.149.16     10.118.243.226
 ``` 
+
+7. Get the port exposed by service using node-port
+
+``` 
+   $ kubectl get svc
+   NAME             CLUSTER-IP       EXTERNAL-IP   PORT(S)        AGE
+   kubernetes       172.21.0.1       <none>        443/TCP        8d
+   nginxservice-4   172.21.231.240   <nodes>       80:30090/TCP   1d
+
+``` 
+
  
 7. You can access nginx application by below url.
 ```
