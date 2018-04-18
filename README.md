@@ -149,4 +149,25 @@ Execute  ``` bx cs init ```
 13. Execute ```helm install mongo --name bankend``` to install your package on your cluster.
 
 
+14. Execute the following command to get the public IP address.
+```
+   bx cs workers <your_cluster_name_created_under_ibm_cloud>”
+   The output will be similar to as below. The ip marked i bold is cluster IP in my case.
+   ID                                                 Public IP      Private IP
+   kube-mel01-paedbc7786e21c450e813eadc69ebaf43b-w1   168.1.149.16   10.118.243.226
+```
+15. Execute  “kubectl get svc” to get Ports exposed by service
+```
+   $ kubectl get svc
+   NAME             CLUSTER-IP      EXTERNAL-IP         PORT(S)                AGE
+   letschat         172.21.108.9    <nodes>             8080:30080/TCP         2h
+   mongo            172.21.43.81    <none>              27017/TCP              2h
+```
+
+16. You can access letschat application by below url.
+```
+   http://<your_cluster_ip>:30080
+```
+
+
 
