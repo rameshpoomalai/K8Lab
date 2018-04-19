@@ -131,31 +131,35 @@ Execute  ``` bx cs init ```
    Execute the export command in the output of cluster-config command.
    Example: ``` export KUBECONFIG=/Users/rameshpoomalai/.bluemix/plugins/container-service/clusters/mycluster/kube-config-hou02-mycluster.yml ```
 
-7. Execute the following command to package your charts.
+7. Execute the following command to initialize the helm service.
+```helm init```
+
+   
+8. Execute the following command to package your charts.
 ```helm package letschat```
    This will package your charts and that be released to release to your repos.
  
-8. Execute ```helm install --debug --dry-run letschat --name frontend``` to to test your charts
+9. Execute ```helm install --debug --dry-run letschat --name frontend``` to to test your charts
  
-9. Execute ```helm install letschat --name frontend``` to install your package on your cluster.
+10. Execute ```helm install letschat --name frontend``` to install your package on your cluster.
 
-10. Execute the following command to package your charts.
+11. Execute the following command to package your charts.
    ```helm package mongo```
    This will package your charts and that be released to release to your repos.
  
-11. Execute ```helm install --debug --dry-run mongo --name bankend``` to to test your charts
+12. Execute ```helm install --debug --dry-run mongo --name bankend``` to to test your charts
  
-12. Execute ```helm install mongo --name bankend``` to install your package on your cluster.
+13. Execute ```helm install mongo --name bankend``` to install your package on your cluster.
 
 
-13. Execute the following command to get the public IP address.
+14. Execute the following command to get the public IP address.
 ```
    bx cs workers <your_cluster_name_created_under_ibm_cloud>”
    The output will be similar to as below. The ip marked i bold is cluster IP in my case.
    ID                                                 Public IP      Private IP
    kube-mel01-paedbc7786e21c450e813eadc69ebaf43b-w1   168.1.149.16   10.118.243.226
 ```
-14. Execute  “kubectl get svc” to get Ports exposed by service
+15. Execute  “kubectl get svc” to get Ports exposed by service
 ```
    $ kubectl get svc
    NAME             CLUSTER-IP      EXTERNAL-IP         PORT(S)                AGE
@@ -163,10 +167,8 @@ Execute  ``` bx cs init ```
    mongo            172.21.43.81    <none>              27017/TCP              2h
 ```
 
-15. You can access letschat application by below url.
+16. You can access letschat application by below url.
 ```
    http://<your_cluster_ip>:30080
 ```
-
-
 
