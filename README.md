@@ -104,9 +104,9 @@ https://github.com/kubernetes/helm/blob/master/docs/install.md
       ```
         brew install kubernetes-helm 
       ```
-        Based on your OS install helm client
+        
 
-2. Login to IBM cloud, Execute “bx login “on your local system terminal window to login. Note if you are using IBM federated email then execute with –sso option.
+2. Login to IBM cloud, Execute ``` bx login ``` on your local system terminal window to login. 
  
 3. After successful login to IBM cloud, Initialize the Container plugin by executing the below command.
 Execute  ``` bx cs init ```
